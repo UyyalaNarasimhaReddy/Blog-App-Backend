@@ -31,6 +31,11 @@ const connectDB = async () => {
     console.log(err);
   }
 };
+const corsOptions = {
+  origin: ['https://blog-app-narasimha.vercel.app', 'https://your-frontend-url.vercel.app'], // Specify your frontend URL
+  credentials: true, // Enable credentials (for cookies)
+};
+app.use(cors(corsOptions));
 
 
 app.use(express.json());
@@ -40,6 +45,8 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/comments', commentRoute);
+
+
 
 
 const storage = multer.memoryStorage();
