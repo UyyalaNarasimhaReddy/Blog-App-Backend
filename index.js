@@ -32,8 +32,8 @@ const connectDB = async () => {
   }
 };
 const corsOptions = {
-  origin: ['https://blog-app-narasimha.vercel.app', 'https://your-frontend-url.vercel.app'], // Specify your frontend URL
-  credentials: true, // Enable credentials (for cookies)
+  origin: ['https://blog-app-narasimha.vercel.app', 'https://your-frontend-url.vercel.app'], 
+  credentials: true, 
 };
 app.use(cors(corsOptions));
 
