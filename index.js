@@ -39,7 +39,7 @@ app.use(cors(corsOptions));
 
 
 app.use(express.json());
-app.use(cors());
+
 app.use(cookieParser());
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
